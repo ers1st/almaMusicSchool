@@ -853,6 +853,21 @@
             display: inline-block;
         }
 
+        .cta-map-wrapper {
+            max-width: 800px;
+            margin: 2.5rem auto 0;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+        }
+
+        .cta-map-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: 300px;
+        }
+
         /* Footer */
         footer {
             background: var(--primary);
@@ -1218,7 +1233,7 @@
     <section class="courses" id="corsi" aria-labelledby="courses-title">
         <div class="section-title">
             <h2 id="courses-title">I Nostri Corsi di Musica</h2>
-            <p>Trova lo strumento musicale che parla al tuo cuore - Corsi per tutti i livelli</p>
+            <p>Corsi per tutti i livelli</p>
         </div>
         <div class="courses-grid">
             <article class="course-card" itemscope itemtype="https://schema.org/Course">
@@ -1355,6 +1370,18 @@
                 <a href="mailto:almamusicschool@gmail.com?subject=Lezione%20di%20prova%20gratuita&body=Ciao!%20Vorrei%20prenotare%20una%20lezione%20di%20prova%20gratuita." id="cta-email-btn" class="primary-btn" aria-label="Invia email per prenotare" target="_blank" rel="noopener noreferrer">Invia email</a>
             </div>
         </div>
+        <div class="cta-map-wrapper" aria-label="Mappa posizione Alma Music School">
+            <iframe 
+                src="https://www.google.com/maps?q=Via+Monte+Nero+20+00012+Colleverde+Guidonia+RM&output=embed" 
+                width="100%" 
+                height="300" 
+                style="border:0; border-radius: 12px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mappa: Alma Music School - Via Monte Nero, 20 - Colleverde di Guidonia">
+            </iframe>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -1370,7 +1397,7 @@
                 </div>
             </div>
             <div class="footer-section">
-                <h3>Link Utili</h3>
+                <h3>Menu</h3>
                 <nav aria-label="Link footer">
                     <a href="#home">Home</a>
                     <a href="#corsi">Corsi di Musica</a>
