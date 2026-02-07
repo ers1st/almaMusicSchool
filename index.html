@@ -132,8 +132,10 @@
     <style>
         :root {
             --primary: #1a1a2e;
-            --accent: #c7956d;
-            --accent-light: #e8d5c4;
+            /*--accent: #c7956d;*/
+            --accent: #355f71;
+            /*--accent-light: #e8d5c4;*/
+            --accent-light: #6bcbf6;
             --text: #2d2d2d;
             --text-light: #6b6b6b;
             --bg: #faf8f5;
@@ -368,6 +370,9 @@
 
         .hero-image img {
             width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
             border-radius: 20px;
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
             transition: transform 0.5s;
@@ -1058,7 +1063,6 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#corsi">Corsi</a></li>
-                <li><a href="#insegnanti">Insegnanti</a></li>
                 <li><a href="#contatti">Contatti</a></li>
             </ul>
         </nav>
@@ -1131,7 +1135,7 @@
     <section class="gallery-section" aria-labelledby="gallery-title">
         <div class="section-title">
             <h2 id="gallery-title">La Nostra Scuola di Musica</h2>
-            <p>Esplora i nostri spazi, le performance degli studenti e i momenti speciali alla Alma Music School</p>
+            <p></p>
         </div>
         <div class="carousel-container">
             <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Immagine precedente">‹</button>
