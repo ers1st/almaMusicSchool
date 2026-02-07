@@ -1,0 +1,13 @@
+# SEO guide (documentazione locale)
+SEO-OPTIMIZATION-GUIDE.md
+
+# Immagini: ignora tutto tranne quelle in images/800x600/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.svg
+*.bmp
+*.ico
+!images/800x600/*.jpg
