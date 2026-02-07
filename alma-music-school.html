@@ -1062,8 +1062,8 @@
                 <li><a href="#contatti">Contatti</a></li>
             </ul>
         </nav>
-        <button class="cta-button">Iscriviti Ora</button>
-        <button class="mobile-menu-btn">☰</button>
+        <!--<button class="cta-button">Iscriviti Ora</button>
+        <button class="mobile-menu-btn">☰</button>-->
     </header>
 
     <!-- Hero Section -->
@@ -1071,14 +1071,14 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Scuola di Musica - <span>Alma Music School</span></h1>
-                <p>Scopri il tuo talento musicale con i migliori insegnanti. Corsi di chitarra, pianoforte, canto e batteria. Laboratori di musica d'insieme per principianti. Easy Piano per bambini dai 4 anni. Lezione di prova gratuita!</p>
+                <p>Finalmente la tua scuola di musica a Colleverde di Guidonia! Scopri il tuo talento musicale con i migliori insegnanti: Corsi di chitarra, pianoforte, canto e batteria. Laboratori di musica d'insieme per principianti. Easy Piano per bambini dai 4 anni. Lezione di prova gratuita!</p>
                 <div class="hero-buttons">
                     <a href="#contatti" class="primary-btn" aria-label="Prenota una lezione di prova gratuita">Prenota Lezione Gratuita</a>
                     <a href="#courses-title" class="primary-btn" aria-label="Scopri tutti i nostri corsi di musica">Scopri i Corsi</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=600&fit=crop" 
+                <img src="./images/logo/logo_alma_music_school.jpg" 
                      alt="Studenti di musica che suonano strumenti alla scuola Alma Music School di Colleverde di Guidonia (RM)" 
                      width="800" 
                      height="600"
@@ -1091,7 +1091,7 @@
     <section class="features" aria-labelledby="features-title">
         <div class="section-title">
             <h2 id="features-title">Perché Scegliere Alma Music School</h2>
-            <p>Passione e dedizione in ogni nota</p>
+            <!--<p>Passione e dedizione in ogni nota</p>-->
         </div>
         <div class="features-grid">
             <article class="feature-card">
@@ -1339,22 +1339,16 @@
                 </div>
             </article>
         </div>
-    </section>
+    </section>-->
 
     <!-- CTA Section -->
     <section class="cta-section" id="contatti" aria-labelledby="cta-title">
         <h2 id="cta-title">Inizia il Tuo Viaggio Musicale</h2>
         <p>Prenota ora una lezione di prova gratuita e scopri il musicista che è in te. Senza impegno!</p>
         <div class="cta-form" aria-label="Contatta per prenotare lezione gratuita">
-            <input 
-                type="email" 
-                name="email"
-                id="email-cta"
-                placeholder="La tua email (opzionale)" 
-                aria-label="Inserisci la tua email per includerla nel messaggio">
             <div class="cta-buttons">
                 <a href="#" id="cta-whatsapp-btn" class="primary-btn" aria-label="Scrivi su WhatsApp per prenotare">WhatsApp</a>
-                <a href="#" id="cta-email-btn" class="primary-btn" aria-label="Invia email per prenotare">Invia email</a>
+                <a href="mailto:almamusicschool@gmail.com?subject=Lezione%20di%20prova%20gratuita&body=Ciao!%20Vorrei%20prenotare%20una%20lezione%20di%20prova%20gratuita." id="cta-email-btn" class="primary-btn" aria-label="Invia email per prenotare" target="_blank" rel="noopener noreferrer">Invia email</a>
             </div>
         </div>
     </section>
@@ -1376,7 +1370,7 @@
                 <nav aria-label="Link footer">
                     <a href="#home">Home</a>
                     <a href="#corsi">Corsi di Musica</a>
-                    <a href="#insegnanti">I Nostri Insegnanti</a>
+                    <!--<a href="#insegnanti">I Nostri Insegnanti</a>-->
                     <a href="#contatti">Contatti</a>
                     <!--<a href="/privacy-policy">Privacy Policy</a>
                     <a href="/cookie-policy">Cookie Policy</a>-->
@@ -1408,15 +1402,11 @@
     <script>
         // CTA: WhatsApp (3896369353) o email (almamusicschool@gmail.com)
         (function() {
-            var emailInput = document.getElementById('email-cta');
-            function getEmail() { return (emailInput && emailInput.value) ? emailInput.value.trim() : ''; }
-
             var whatsappBtn = document.getElementById('cta-whatsapp-btn');
             if (whatsappBtn) {
                 whatsappBtn.addEventListener('click', function(e) {
                     e.preventDefault();
-                    var email = getEmail();
-                    var msg = 'Ciao! Vorrei prenotare una lezione di prova gratuita.' + (email ? ' La mia email è: ' + email : '');
+                    var msg = 'Ciao! Vorrei informazioni sui corsi di musica.';
                     window.open('https://wa.me/393896369353?text=' + encodeURIComponent(msg), '_blank', 'noopener,noreferrer');
                 });
             }
@@ -1425,9 +1415,8 @@
             if (emailBtn) {
                 emailBtn.addEventListener('click', function(e) {
                     e.preventDefault();
-                    var email = getEmail();
                     var subject = 'Prenotazione lezione di prova gratuita';
-                    var body = 'Ciao! Vorrei prenotare una lezione di prova gratuita.' + (email ? '\nLa mia email è: ' + email : '');
+                    var body = 'Ciao! Vorrei informazioni sui corsi di musica.';
                     var url = 'mailto:almamusicschool@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
                     window.location.href = url;
                 });
