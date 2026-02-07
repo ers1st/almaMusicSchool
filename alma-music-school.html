@@ -821,11 +821,31 @@
             transition: all 0.3s;
         }
 
-        .cta-form button:hover {
+        .cta-form button:hover,
+        .cta-form .cta-buttons a:hover {
             background: var(--white);
             color: var(--primary);
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-form .cta-buttons a {
+            padding: 1rem 2.5rem;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
         }
 
         /* Footer */
@@ -1094,14 +1114,14 @@
                 <h3>Performance dal Vivo e Concerti</h3>
                 <p>Saggi musicali, concerti pubblici e masterclass periodiche per mettere in pratica ciò che hai imparato, superare la timidezza e crescere come artista.</p>
             </article>-->
-            <article class="feature-card">
+            <!--<article class="feature-card">
                 <div class="feature-icon" aria-hidden="true">🌟</div>
                 <h3>Flessibilità Oraria Completa</h3>
                 <p>Lezioni mattutine, pomeridiane e serali dal lunedì al sabato per adattarsi ai tuoi impegni lavorativi, scolastici e quotidiani. Massima flessibilità di orario.</p>
-            </article>
+            </article>-->
             <article class="feature-card">
                 <div class="feature-icon" aria-hidden="true">🏆</div>
-                <h3>Preparazione al Conservatorio</h3>
+                <h3>Preparazione Accademica</h3>
                 <p>Preparazione completa per esami e certificazioni riconosciute a livello nazionale e internazionale. Percorsi pre-accademici per conservatorio.</p>
             </article>
         </div>
@@ -1118,13 +1138,13 @@
             <div class="carousel-wrapper">
                 <div class="carousel-track" id="carouselTrack">
                     <div class="carousel-slide">
-                        <img src="./images/800x600/flyer-esibizione-fine-anno.jpg" 
-                             alt="Saggio di fine anno Alma Music School" 
+                        <img src="./images/800x600/flyer-corso-canto.jpg" 
+                             alt="Lezione individuale di canto" 
                              width="800" 
                              height="600"
                              loading="lazy">
                         <div class="slide-caption">
-                            <h3>Saggi di fine anno, esibizioni natalizie</h3>
+                            <h3>Lezione individuale di canto</h3>
                             <p></p>
                         </div>
                     </div>
@@ -1230,7 +1250,7 @@
                     </div>
                 </div>
             </article>
-            <article class="course-card" itemscope itemtype="https://schema.org/Course">
+            <!--<article class="course-card" itemscope itemtype="https://schema.org/Course">
                 <div class="course-image" aria-hidden="true">🥁</div>
                 <div class="course-content">
                     <h3 itemprop="name">Corso di Batteria</h3>
@@ -1240,7 +1260,7 @@
                         <span>👥 Tutti i livelli</span>
                     </div>
                 </div>
-            </article>
+            </article>-->
             <!--<article class="course-card" itemscope itemtype="https://schema.org/Course">
                 <div class="course-image" aria-hidden="true">🎻</div>
                 <div class="course-content">
@@ -1267,7 +1287,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials" aria-labelledby="testimonials-title">
+    <!--<section class="testimonials" aria-labelledby="testimonials-title">
         <div class="section-title">
             <h2 id="testimonials-title">Recensioni dei Nostri Studenti</h2>
             <p>Le storie di chi ha trovato la sua voce musicale alla Alma Music School</p>
@@ -1325,16 +1345,18 @@
     <section class="cta-section" id="contatti" aria-labelledby="cta-title">
         <h2 id="cta-title">Inizia il Tuo Viaggio Musicale</h2>
         <p>Prenota ora una lezione di prova gratuita e scopri il musicista che è in te. Senza impegno!</p>
-        <form class="cta-form" action="/prenota-lezione" method="post" aria-label="Form prenotazione lezione gratuita">
+        <div class="cta-form" aria-label="Contatta per prenotare lezione gratuita">
             <input 
                 type="email" 
                 name="email"
                 id="email-cta"
-                placeholder="La tua email" 
-                aria-label="Inserisci la tua email"
-                required>
-            <button type="submit" aria-label="Invia richiesta lezione gratuita">Prenota Lezione Gratuita</button>
-        </form>
+                placeholder="La tua email (opzionale)" 
+                aria-label="Inserisci la tua email per includerla nel messaggio">
+            <div class="cta-buttons">
+                <a href="#" id="cta-whatsapp-btn" class="primary-btn" aria-label="Scrivi su WhatsApp per prenotare">WhatsApp</a>
+                <a href="#" id="cta-email-btn" class="primary-btn" aria-label="Invia email per prenotare">Invia email</a>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -1384,6 +1406,34 @@
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
+        // CTA: WhatsApp (3896369353) o email (almamusicschool@gmail.com)
+        (function() {
+            var emailInput = document.getElementById('email-cta');
+            function getEmail() { return (emailInput && emailInput.value) ? emailInput.value.trim() : ''; }
+
+            var whatsappBtn = document.getElementById('cta-whatsapp-btn');
+            if (whatsappBtn) {
+                whatsappBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var email = getEmail();
+                    var msg = 'Ciao! Vorrei prenotare una lezione di prova gratuita.' + (email ? ' La mia email è: ' + email : '');
+                    window.open('https://wa.me/393896369353?text=' + encodeURIComponent(msg), '_blank', 'noopener,noreferrer');
+                });
+            }
+
+            var emailBtn = document.getElementById('cta-email-btn');
+            if (emailBtn) {
+                emailBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var email = getEmail();
+                    var subject = 'Prenotazione lezione di prova gratuita';
+                    var body = 'Ciao! Vorrei prenotare una lezione di prova gratuita.' + (email ? '\nLa mia email è: ' + email : '');
+                    var url = 'mailto:almamusicschool@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+                    window.location.href = url;
+                });
+            }
+        })();
+
         // Carousel functionality
         let currentSlide = 0;
         const track = document.getElementById('carouselTrack');
@@ -1457,13 +1507,6 @@
                     });
                 }
             });
-        });
-
-        // Form submission
-        document.querySelector('.cta-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Grazie per il tuo interesse! Ti contatteremo presto per programmare la tua lezione gratuita.');
-            this.reset();
         });
 
         // Add scroll animation for elements
