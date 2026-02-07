@@ -12,3 +12,4 @@ SEO-OPTIMIZATION-GUIDE.md
 *.ico
 !images/800x600/*.jpg
 !images/logo/*.jpg
+!images/icons/*.png

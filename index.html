@@ -853,6 +853,19 @@
             display: inline-block;
         }
 
+        .cta-btn-with-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-btn-with-icon img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
         .cta-map-wrapper {
             max-width: 800px;
             margin: 2.5rem auto 0;
@@ -923,7 +936,15 @@
 
         .social-icon:hover {
             background: var(--accent);
+            color: var(--white);
             transform: translateY(-5px);
+        }
+
+        .social-icon img {
+            display: block;
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
         }
 
         .footer-bottom {
@@ -1366,8 +1387,8 @@
         <p>Prenota ora una lezione di prova gratuita e scopri il musicista che è in te. Senza impegno!</p>
         <div class="cta-form" aria-label="Contatta per prenotare lezione gratuita">
             <div class="cta-buttons">
-                <a href="#" id="cta-whatsapp-btn" class="primary-btn" aria-label="Scrivi su WhatsApp per prenotare">WhatsApp</a>
-                <a href="mailto:almamusicschool@gmail.com?subject=Lezione%20di%20prova%20gratuita&body=Ciao!%20Vorrei%20prenotare%20una%20lezione%20di%20prova%20gratuita." id="cta-email-btn" class="primary-btn" aria-label="Invia email per prenotare" target="_blank" rel="noopener noreferrer">Invia email</a>
+                <a href="#" id="cta-whatsapp-btn" class="primary-btn cta-btn-with-icon" aria-label="Scrivi su WhatsApp per prenotare"><img src="./images/icons/whatsapp.png" alt="" width="22" height="22" loading="lazy"> WhatsApp</a>
+                <a href="mailto:almamusicschool@gmail.com?subject=Lezione%20di%20prova%20gratuita&body=Ciao!%20Vorrei%20prenotare%20una%20lezione%20di%20prova%20gratuita." id="cta-email-btn" class="primary-btn cta-btn-with-icon" aria-label="Invia email per prenotare" target="_blank" rel="noopener noreferrer"><img src="./images/icons/gmail.png" alt="" width="22" height="22" loading="lazy"> Invia email</a>
             </div>
         </div>
         <div class="cta-map-wrapper" aria-label="Mappa posizione Alma Music School">
@@ -1391,9 +1412,9 @@
                 <h3>Alma Music School</h3>
                 <p>La tua scuola di musica a Colleverde di Guidonia. Passione, professionalità e dedizione all'insegnamento. Corsi di musica per bambini, ragazzi e adulti.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/almamusicschool" class="social-icon" aria-label="Seguici su Facebook" rel="noopener noreferrer" target="_blank">f</a>
-                    <a href="https://www.instagram.com/almamusicschool" class="social-icon" aria-label="Seguici su Instagram" rel="noopener noreferrer" target="_blank">📷</a>
-                    <a href="https://www.youtube.com/almamusicschool" class="social-icon" aria-label="Iscriviti al nostro canale YouTube" rel="noopener noreferrer" target="_blank">▶</a>
+                    <a href="https://www.facebook.com/almamusicschool" class="social-icon" aria-label="Seguici su Facebook" rel="noopener noreferrer" target="_blank"><img src="./images/icons/facebook.png" alt="" width="24" height="24" loading="lazy"></a>
+                    <a href="https://www.instagram.com/almamusicschool" class="social-icon" aria-label="Seguici su Instagram" rel="noopener noreferrer" target="_blank"><img src="./images/icons/instagram.png" alt="" width="24" height="24" loading="lazy"></a>
+                    <a href="https://www.tiktok.com/@almamusicschool" class="social-icon" aria-label="Seguici su TikTok" rel="noopener noreferrer" target="_blank"><img src="./images/icons/tiktok.png" alt="" width="24" height="24" loading="lazy"></a>
                 </div>
             </div>
             <div class="footer-section">
